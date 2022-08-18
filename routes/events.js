@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router();
-const { createEvent, updateEvent, deleteEvent, getEvent, getAllEvents, registerUser, loginUser, loginAdmin } = require('../controllers/users');
+const { createEvent, updateEvent, deleteEvent, getEvent, getAllEvents, registerUser, loginUser, loginAdmin, regForEvent } = require('../controllers/users');
 
 // Register the user
 router.post("/register", registerUser);
@@ -18,13 +18,13 @@ router.post("/", createEvent);
 router.put("/:eventId", updateEvent);
 
 // Delete an Event
-router.delete("/delete/:eventId", deleteEvent);
+router.delete("/:eventId", deleteEvent);
 
 // Register for the Event
-router.post("/:eventId", );
+// router.post("/:eventId", regForEvent);
 
 // Verify the user for that event
-router.post("/:verify", );
+// router.post("/:verify", );
 
 router.get("/:eventId", getEvent);
 
