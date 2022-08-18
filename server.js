@@ -22,7 +22,9 @@ mongoose
 .then(() => console.log('MongoDB connected!'))
 .catch(err => console.log('Error:- ' + err));
 
-const eventRoutes = require('./routes/admin/events');
+const eventRoutes = require('./routes/events');
+const userRoutes = require('./routes/user/users');
 
 // Routes
 app.use('/events', eventRoutes);
+app.use('/user', userRoutes);
